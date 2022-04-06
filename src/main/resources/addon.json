@@ -1,0 +1,13 @@
+{
+  "name": "WorldRestrictionAddon",
+  "author": "brainsynder",
+
+  "version": 0.2,
+  "supported-build": 163,
+
+  "description": [
+    "&7This addon restricts certain tasks",
+    "&7from happening in certain worlds",
+    "&7Example: &aPet Mounting &7and &aPet Hats"
+  ]
+}

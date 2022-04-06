@@ -3,7 +3,7 @@ package addon.brainsynder.world;
 import com.google.common.collect.Lists;
 import org.bukkit.event.EventHandler;
 import simplepets.brainsynder.addon.AddonConfig;
-import simplepets.brainsynder.addon.PetAddon;
+import simplepets.brainsynder.addon.PetModule;
 import simplepets.brainsynder.api.Namespace;
 import simplepets.brainsynder.api.event.entity.PetMountEvent;
 import simplepets.brainsynder.api.event.entity.PrePetHatEvent;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Namespace(namespace = "WorldRestriction")
-public class WorldRestrictionAddon extends PetAddon {
+public class WorldRestrictionAddon extends PetModule {
     private boolean rideRestriction = false;
     private List<String> rideWorldRestrictions = new ArrayList<>();
     private String rideRestrictionReason = null;
@@ -49,25 +49,6 @@ public class WorldRestrictionAddon extends PetAddon {
         hatRestriction = config.getBoolean("world-restrictions.pet-hat.enabled", false);
         hatWorldRestrictions = config.getStringList("world-restrictions.pet-hat.list");
         hatRestrictionReason = config.getString("world-restrictions.pet-hat.reason", null);
-    }
-
-    @Override
-    public double getVersion() {
-        return 0.1;
-    }
-
-    @Override
-    public String getAuthor() {
-        return "brainsynder";
-    }
-
-    @Override
-    public List<String> getDescription() {
-        return Lists.newArrayList(
-                "&7This addon restricts certain tasks",
-                "&7from happening in certain worlds",
-                "&7Example: &aPet Mounting &7and &aPet Hats"
-        );
     }
 
     @EventHandler
